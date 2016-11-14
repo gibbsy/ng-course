@@ -1,0 +1,26 @@
+{
+    "folders":
+    [
+        {
+            "path": "src/app",
+            "name":"App",
+            "file_exclude_patterns": ["*.spec.ts"]
+
+        },
+        {
+            "path": "src",
+            "name":"src"
+        },
+        {
+            "path": "/",
+            "name": "Everything",
+            "folder_exclude_patterns": ["node_modules"]
+        }
+    ],
+    "settings":
+    {
+        "tab_size": 4
+    },
+    "build_systems":
+    [ ]
+}
