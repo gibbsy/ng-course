@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Recipe } from '../';
+import { Recipe } from '../recipe';
 
 @Component({
   selector: 'rb-recipe-item',

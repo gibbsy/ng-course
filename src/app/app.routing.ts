@@ -1,13 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { RecipesComponent } from "./recipes";
-import { ShoppingListComponent } from "./shopping-list";
-import { RECIPE_ROUTES } from "./recipes/recipes.routes";
+import { HomeComponent } from './home.component';
 
-export const APP_ROUTES: Routes = [
-	{ path: '', redirectTo: '/recipes', pathMatch: 'full' },
-	{ path: 'recipes', component: RecipesComponent, children: RECIPE_ROUTES },
-	{ path: 'shopping-list', component: ShoppingListComponent },
+const APP_ROUTES: Routes = [
+	{ path: '', component: HomeComponent },
+	{ path: 'recipes', loadChildren: 'app/recipes/recipes.module#RecipesModule' },
+	{ path: 'shopping-list', loadChildren: 'app/shopping-list/shopping-list.module#ShoppingListModule' },
 ];
 
 export const AppRouting = RouterModule.forRoot(APP_ROUTES);

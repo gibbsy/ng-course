@@ -26,6 +26,10 @@ export class ShoppingListService {
   deleteItem(item: Ingredient) {
     this.items.splice(this.items.indexOf(item), 1);
   }
-  
+
+  deleteAll() {
+    this.items.length = 0;
+    console.log(this.items);
+  }
 
 }

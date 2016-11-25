@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Ingredient } from '../shared';
+import { Ingredient } from '../shared/ingredient';
 import { ShoppingListService } from './shopping-list.service'
 
 @Component({
@@ -19,6 +19,10 @@ export class ShoppingListComponent implements OnInit {
 
   onSelectItem(item: Ingredient) {
       this.selectedItem = item;
+  }
+
+  onClear() {
+      this.selectedItem = null;
   }
 
 }

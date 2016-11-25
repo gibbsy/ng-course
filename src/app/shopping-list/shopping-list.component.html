@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-xs-10">
-    <rb-shopping-list-add [item]="selectedItem"></rb-shopping-list-add>
+    <rb-shopping-list-add [item]="selectedItem" (clearSelected)="onClear()"></rb-shopping-list-add>
     <hr>
     <ul class="list-group">
     <h3>Shopping List</h3>

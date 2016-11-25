@@ -29,8 +29,8 @@
           <button class="btn btn-success" type="submit" *ngIf="isAdd" [disabled]="!f.valid">Add</button>
           <button class="btn btn-success" type="submit" *ngIf="!isAdd" [disabled]="!f.valid">Save</button>
           <button class="btn btn-danger" type="button" (click)="onDelete()" *ngIf="!isAdd">Delete Item</button>
-          <button class="btn btn-primary" type="button" (click)="onClear()" *ngIf="!isAdd">Clear Form</button>
-           <button class="btn btn-primary" type="button" (click)="onDeleteAll()" *ngIf="!isAdd">Delete all</button>
+          <button class="btn btn-primary" type="button" (click)="onClearSelected()" *ngIf="!isAdd">Clear</button>
+           <button class="btn btn-primary" type="button" (click)="onDeleteAll()" *ngIf="isAdd && multipleItems">Delete all</button>
         </div>
       </div>
     </form>
